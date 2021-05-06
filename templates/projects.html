@@ -6,12 +6,10 @@
 {% block title %}Projects{% endblock %}
 
 {% block content %}
-{% for row in projects|batch(3) %}
-<div class="card-deck mb-auto text-dark">
-    <div class="row">
-    {% for project in row %}
-    <div class="col-sm-4 d-flex align-items-stretch">
-        <div class="card">
+<div class="row row-cols-1 row-cols-md-2 g-4 text-dark">
+    {% for project in projects %}
+    <div class="col">
+        <div class="card h-100">
             <div class="card-body">
                 <h5 class="card-title">{{ project[0] }}</h5>
                 <p class="card-text">{{ project[1] }}</p>
@@ -19,7 +17,5 @@
         </div>
     </div>
     {% endfor %}
-    </div>
 </div>
-{% endfor %}
 {% endblock %}

@@ -1,15 +1,13 @@
-html, body {
-  min-height: 100%;
+body {
   overflow-y: scroll;
   font-family: 'Roboto Mono', monospace;
-  padding: 3em 2em;
   font-size: 18px;
   text-align: center;
   background: rgb(0, 0, 0);
   color: rgb(175, 175, 175);
 }
 
-body {
+#content {
   max-width: 42em;
 }
 
@@ -28,6 +26,14 @@ h2 {
 a {
   text-decoration: none;
   color:inherit;
+}
+
+.active {
+  color:aqua;
+}
+
+a:hover {
+  color:aqua;
 }
 
 .row {
@@ -49,7 +55,6 @@ a {
 
 .hoverable:hover span.replace {
   display:inline;
-  color: rgb(0, 255, 0)
 }
 
 .txt-typewriter {

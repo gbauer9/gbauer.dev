@@ -16,7 +16,7 @@ def projects():
 
     repos = requests.get(url, auth=(USERNAME,TOKEN)).json()
 
-    projects = [(repo["name"], repo["description"]) for repo in repos]
+    projects = [(repo["name"], repo["description"], repo["html_url"]) for repo in repos]
     return render_template("projects.html", projects=projects)
 
 @app.route('/blog')

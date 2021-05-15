@@ -1,7 +1,7 @@
 body {
   overflow-y: scroll;
   font-family: 'Roboto Mono', monospace;
-  font-size: 18px;
+  font-size: 1.15rem;
   text-align: center;
   background: rgb(0, 0, 0);
   color: rgb(175, 175, 175);
@@ -36,13 +36,24 @@ a:hover {
   color:aqua;
 }
 
-.row {
+.card{
+  background-color: inherit;
+  border-color: rgb(175, 175, 175);
+}
+
+.col {
+  margin: 0;
+  padding:calc(var(--bs-gutter-x)/ 4);
+}
+
+#socials {
   margin-top: auto;
   display: flex;
 }
 
-.col {
-  flex: 50%;
+#project_cards {
+  text-align: left;
+  font-size: 1rem;
 }
 
 .replace {

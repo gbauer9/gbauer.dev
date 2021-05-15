@@ -8,7 +8,7 @@ import requests
 
 app = Flask(__name__)
 CORS(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/test.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////Users/gbauer/Documents/homebase/test.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -21,6 +21,8 @@ class User(db.Model):
 
     def __repr__(self):
         return '<User %r>' % self.username
+
+db.create_all()
 
 # VIEWS
 

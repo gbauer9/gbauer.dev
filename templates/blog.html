@@ -4,5 +4,11 @@
 {% block title %}Garrett Bauer{% endblock %}
 
 <!--
+    TODO: Set up DB, SQLAlchemy and admin login
     TODO: Learn how to make a blog
 -->
+{% block content %}
+{% for user in users %}
+<p>{{ user.id }}</p>
+{% endfor %}
+{% endblock %}

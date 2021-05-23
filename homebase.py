@@ -1,6 +1,9 @@
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
+from flask_admin import Admin
+from flask_admin.contrib.sqla import ModelView
 from flask_cors import CORS
+from flask_sqlalchemy.model import Model
 from config import *
 import requests
 
@@ -8,6 +11,8 @@ import requests
 
 app = Flask(__name__)
 CORS(app)
+app.secret_key = 'DEV'
+app.config['FLASK_ADMIN_SWATCH'] = 'cerulean'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////Users/gbauer/Documents/homebase/test.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
@@ -21,6 +26,14 @@ class User(db.Model):
 
     def __repr__(self):
         return '<User %r>' % self.username
+        
+class Entry(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(50), unique=False, nullable=False)
+    contents = db.Column(db.String(10000), unique=False, nullable=False)
+
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    user = db.relationship('User', backref=db.backref('entries', lazy=True))
 
 db.create_all()
 
@@ -45,10 +58,13 @@ def blog(entry=None):
     users = User.query.all()
     return render_template('blog.html', users=users)
 
-
+admin = Admin(app, name='homebase', template_mode='bootstrap3')
+admin.add_view(ModelView(User, db.session))
+admin.add_view(ModelView(Entry, db.session))
 
 if __name__ == "__main__":
     app.run()
 
 # TODO: Refactor into multiple files to separate model from views
-# TODO: Create admin page
+# TODO: Add login so only admin can access admin page
+# TODO: Add model for blog

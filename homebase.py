@@ -52,18 +52,12 @@ def projects():
     projects = [(repo["name"], repo["description"], repo["html_url"]) if repo["description"] else (repo["name"], "No README available", repo["html_url"]) for repo in repos]
     return render_template("projects.html", projects=projects)
 
-@app.route('/blog/')
-@app.route('/blog/<entry>')
-def blog(entry=None):
-    users = User.query.all()
-    return render_template('blog.html', users=users)
-
 admin = Admin(app, name='homebase', template_mode='bootstrap3')
 admin.add_view(ModelView(User, db.session))
 admin.add_view(ModelView(Entry, db.session))
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
 
 # TODO: Refactor into multiple files to separate model from views
 # TODO: Add login so only admin can access admin page

@@ -24,8 +24,7 @@
                 <nav class="nav justify-content-center float-md-end">
                     {% set navigation_bar = [
                         ('/', 'index', 'Home'),
-                        ('/projects', 'projects', 'Projects'),
-                        ('/blog', 'blog', 'Blog')] %}
+                        ('/projects', 'projects', 'Projects')] %}
                     {% for href, id, caption in navigation_bar %}
                     <a class="nav-link {% if id == active_page %}active{% endif %}" href="{{ href|e }}">{{ caption|e }}</a>
                     {% endfor %}

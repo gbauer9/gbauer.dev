@@ -48,6 +48,7 @@ def projects():
     url = "https://api.github.com/users/gbauer9/repos"
 
     repos = requests.get(url, auth=(USERNAME,TOKEN)).json()
+    print(repos)
 
     projects = [(repo["name"], repo["description"], repo["html_url"]) if repo["description"] else (repo["name"], "No README available", repo["html_url"]) for repo in repos]
     return render_template("projects.html", projects=projects)

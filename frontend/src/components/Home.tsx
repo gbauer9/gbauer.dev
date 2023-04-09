@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, memo } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { type } from "@camwiegert/typical";
 
 const Home: React.FC = () => {
@@ -36,4 +36,4 @@ const Home: React.FC = () => {
     );
 };
 
-export default memo(Home);
+export default Home;

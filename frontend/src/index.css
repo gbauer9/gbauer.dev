@@ -35,3 +35,18 @@ a {
 a:hover {
   color:aqua;
 }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.typicalWrapper::after {
+  content: "|";
+  animation: blink 1s infinite step-start;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}

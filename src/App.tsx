@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
 import Navbar from './components/NavBar';
@@ -12,12 +12,12 @@ function App() {
   return (
     <>
       <Navbar />
-      <HashRouter>
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="*" element={<NoMatch />} />
-      </HashRouter>
+      </Routes>
       <Footer />
     </>
   );

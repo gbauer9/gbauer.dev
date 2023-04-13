@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import '../Home.css'
 import { type } from "@camwiegert/typical";
+import Container from 'react-bootstrap/esm/Container';
 
 const Home: React.FC = () => {
     const typicalRef = useRef(null);
@@ -12,11 +12,11 @@ const Home: React.FC = () => {
     });
 
     return (
-        <div id="home">
+        <Container>
             <h1>Garrett Bauer</h1>
             <h2 ref={typicalRef} className="typicalWrapper"></h2>
             <h3>📍Portland, Oregon</h3>
-            <div>
+            <Container>
                 <div>
                     <a href="https://github.com/gbauer9" >
                         <span>Github</span>
@@ -32,8 +32,8 @@ const Home: React.FC = () => {
                         <span>Email</span>
                     </a>
                 </div>
-            </div>
-        </div>
+            </Container>
+        </Container>
     );
 };
 

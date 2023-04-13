@@ -1,0 +1,30 @@
+body {
+  font-family: 'Roboto Mono', monospace;
+  background-color: black;
+  color: #afafaf;
+}
+
+a {
+  color: inherit !important;
+}
+
+a:hover {
+  color: aqua !important;
+}
+
+.nav-link {
+  color: inherit;
+}
+
+.nav-link.active {
+  color: aqua !important;
+}
+
+.typicalWrapper::after {
+  content: "|";
+  animation: blink 1s infinite step-start;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}

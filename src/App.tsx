@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <HashRouter>
+      <HashRouter basename="/homebase">
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />

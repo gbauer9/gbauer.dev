@@ -1,11 +1,10 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import './App.css';
-import Home from './components/Home';
+import Home from './routes/Home';
 import Navbar from './components/NavBar';
-import About from './components/About';
-import Projects from './components/Projects';
-import NoMatch from './components/NoMatch';
+import About from './routes/About';
+import Projects from './routes/Projects';
+import NoMatch from './routes/NoMatch';
 import Footer from './components/Footer';
 
 function App() {

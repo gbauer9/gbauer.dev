@@ -1,4 +1,10 @@
+html {
+  height: 100%;
+  width: 100%;
+}
 body {
+  height: inherit;
+  width: inherit;
   overflow-y: scroll;
   font-family: 'Roboto Mono', monospace;
   font-size: 1.15rem;
@@ -7,8 +13,26 @@ body {
   color: rgb(175, 175, 175);
 }
 
-#content {
-  max-width: 42em;
+#root {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+#navBar {
+  min-height: 10%;
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+#navBar a {
+  display: block;
+  padding: 1em;
 }
 
 h1, h2 {
@@ -37,7 +61,7 @@ a:hover {
 }
 
 footer {
-  position: absolute;
+  margin-top: auto;
   bottom: 0;
   width: 100%;
 }

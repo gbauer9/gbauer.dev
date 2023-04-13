@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import '../Home.css'
 import { type } from "@camwiegert/typical";
 
 const Home: React.FC = () => {
@@ -11,7 +12,7 @@ const Home: React.FC = () => {
     });
 
     return (
-        <div>
+        <div id="home">
             <h1>Garrett Bauer</h1>
             <h2 ref={typicalRef} className="typicalWrapper"></h2>
             <h3>📍Portland, Oregon</h3>

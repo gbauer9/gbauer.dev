@@ -1,0 +1,2 @@
+body{background:#000;color:#afafaf;font-family:Roboto Mono,monospace;font-size:1.15rem;overflow-y:scroll;text-align:center}#content{max-width:42em}h1,h2{font-weight:200;margin:.4em 0}h1{font-size:3.5em}h2{color:#888;font-size:2em}a{color:inherit;text-decoration:none}.active,a:hover{color:aqua}footer{bottom:0;position:absolute;width:100%}.typicalWrapper:after{-webkit-animation:blink 1s step-start infinite;animation:blink 1s step-start infinite;content:"|"}@-webkit-keyframes blink{50%{opacity:0}}@keyframes blink{50%{opacity:0}}
+/*# sourceMappingURL=main.26d3a175.css.map*/

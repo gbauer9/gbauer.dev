@@ -4,7 +4,7 @@ import { type } from "@camwiegert/typical";
 const Home: React.FC = () => {
     const typicalRef = useRef(null);
 
-    const steps = [2500, "Garrett Bauer"]
+    const steps = [2500, "Software Engineer"]
 
     useEffect(() => {
         type(typicalRef.current, ...steps);
@@ -12,8 +12,8 @@ const Home: React.FC = () => {
 
     return (
         <div>
-            <h1 ref={typicalRef} className="typicalWrapper"></h1>
-            <h2>Software Engineer</h2>
+            <h1>Garrett Bauer</h1>
+            <h2 ref={typicalRef} className="typicalWrapper"></h2>
             <h3>📍Portland, Oregon</h3>
             <div>
                 <div>

@@ -13,7 +13,7 @@ const Navigation: React.FC = () => {
               <Nav className="me-auto">
                 <Nav.Link as={NavLink} to="/" className="primary-link">Home</Nav.Link>
                 <Nav.Link as={NavLink} to="/about" className="primary-link">About</Nav.Link>
-                <Nav.Link as={NavLink} to="/projects" className="primary-link">Projects</Nav.Link>
+                {/* <Nav.Link as={NavLink} to="/projects" className="primary-link">Projects</Nav.Link> */}
               </Nav>
             </Navbar.Collapse>
           </Container>

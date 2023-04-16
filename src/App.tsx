@@ -3,7 +3,6 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './routes/Home';
 import Navigation from './components/Navigation';
 import About from './routes/About';
-import Projects from './routes/Projects';
 import NoMatch from './routes/NoMatch';
 import Footer from './components/Footer';
 import Container from 'react-bootstrap/Container';

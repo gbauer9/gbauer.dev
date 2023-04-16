@@ -31,11 +31,18 @@ const Home: React.FC = () => {
                     </a>
                 </Col>
                 <Col>
+                    <a className="hoverable" href="https://wellfound.com/u/garrett-bauer">
+                        <span className="init">Wellfound</span>
+                        <span className="replace">{">"}Wellfound</span>
+                    </a>
+                </Col>
+                <Col>
                     <a className="hoverable" href="mailto:bauer.garrett9@gmail.com">
                         <span className="init">Email</span>
                         <span className="replace">{">"}Email</span>
                     </a>
                 </Col>
+                
             </Row>
         </div>
     );

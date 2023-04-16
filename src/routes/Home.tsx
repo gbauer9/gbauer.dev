@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { type } from "@camwiegert/typical";
-import Container from 'react-bootstrap/esm/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const Home: React.FC = () => {
     const typicalRef = useRef(null);
@@ -12,28 +13,28 @@ const Home: React.FC = () => {
     });
 
     return (
-        <Container>
+        <>
             <h1>Garrett Bauer</h1>
             <h2 ref={typicalRef} className="typicalWrapper"></h2>
             <h3>📍Portland, Oregon</h3>
-            <Container>
-                <div>
-                    <a href="https://github.com/gbauer9" >
-                        <span>Github</span>
+            <Row className="mb-auto mt-5">
+                <Col>
+                    <a className="hoverable" href="https://github.com/gbauer9" >
+                        <span className="init">Github</span><span className="replace">{">"}Github</span>
                     </a>
-                </div>
-                <div >
-                    <a href="https://www.linkedin.com/in/gbauer9/">
-                        <span>LinkedIn</span>
+                </Col>
+                <Col>
+                    <a className="hoverable" href="https://www.linkedin.com/in/gbauer9/">
+                        <span className="init">LinkedIn</span><span className="replace">{">"}LinkedIn</span>
                     </a>
-                </div>
-                <div>
-                    <a href="mailto:bauer.garrett9@gmail.com">
-                        <span>Email</span>
+                </Col>
+                <Col>
+                    <a className="hoverable" href="mailto:bauer.garrett9@gmail.com">
+                        <span className="init">Email</span><span className="replace">{">"}Email</span>
                     </a>
-                </div>
-            </Container>
-        </Container>
+                </Col>
+            </Row>
+        </>
     );
 };
 

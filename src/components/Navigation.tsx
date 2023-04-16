@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 const Navigation: React.FC = () => {
   return (
     <>
-        <Navbar expand="lg">
+        <Navbar className="mb-auto">
           <Container>
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">

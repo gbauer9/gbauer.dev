@@ -1,11 +1,22 @@
-body {
+html, body, #root {
+  height: 100%;
   font-family: 'Roboto Mono', monospace;
   background-color: black;
   color: #afafaf;
 }
 
+.container {
+  max-width: 42em;
+}
+
+h1 {
+  font-size: 3.5rem;
+  color: white;
+}
+
 a {
   color: inherit !important;
+  text-decoration: none;
 }
 
 a:hover {
@@ -16,7 +27,7 @@ a:hover {
   color: inherit;
 }
 
-.nav-link.active {
+a.nav-link.active {
   color: aqua !important;
 }
 
@@ -27,4 +38,16 @@ a:hover {
 
 @keyframes blink {
   50% { opacity: 0; }
+}
+
+.replace {
+  display:none;
+}
+
+.hoverable:hover span.init {
+  display:none;
+}
+
+.hoverable:hover span.replace {
+  display:inline;
 }

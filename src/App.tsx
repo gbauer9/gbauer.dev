@@ -9,7 +9,7 @@ import Container from 'react-bootstrap/Container';
 
 function App() {
   return (
-    <Container className="d-flex h-100 p-3 mx-auto flex-column text-center">
+    <Container className="d-flex h-100 p-3 mx-auto flex-column">
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />

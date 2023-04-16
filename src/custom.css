@@ -51,3 +51,7 @@ a.nav-link.active {
 .hoverable:hover span.replace {
   display:inline;
 }
+
+#profile-pic {
+  max-width: 50%;
+}

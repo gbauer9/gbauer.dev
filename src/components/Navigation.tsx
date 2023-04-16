@@ -6,8 +6,8 @@ import { NavLink } from 'react-router-dom';
 const Navigation: React.FC = () => {
   return (
     <>
-      <Navbar className="mb-auto">
-        <Nav className="me-auto">
+      <Navbar>
+        <Nav className="">
           <Nav.Link as={NavLink} to="/" className="primary-link">Home</Nav.Link>
           <Nav.Link as={NavLink} to="/about" className="primary-link">About</Nav.Link>
           {/* <Nav.Link as={NavLink} to="/projects" className="primary-link">Projects</Nav.Link> */}

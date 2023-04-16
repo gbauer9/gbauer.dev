@@ -4,18 +4,18 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 const Home: React.FC = () => {
-    const typicalRef = useRef(null);
+    const titleRef = useRef(null);
 
-    const steps = [2500, "Software Engineer"]
+    const titleSteps = [2000, "Software Engineer"]
 
     useEffect(() => {
-        type(typicalRef.current, ...steps);
+        type(titleRef.current, ...titleSteps);
     });
 
     return (
         <>
             <h1>Garrett Bauer</h1>
-            <h2 ref={typicalRef} className="typicalWrapper"></h2>
+            <h2 ref={titleRef} className="typicalWrapper"></h2>
             <h3>📍Portland, Oregon</h3>
             <Row className="mb-auto mt-5">
                 <Col>

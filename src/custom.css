@@ -14,6 +14,10 @@ h1 {
   color: white;
 }
 
+span {
+  font-size: 1.5rem;
+}
+
 a {
   color: inherit !important;
   text-decoration: none;
@@ -21,6 +25,14 @@ a {
 
 a:hover {
   color: aqua !important;
+}
+
+svg:hover {
+  fill: aqua;
+}
+
+.svg-icon {
+  vertical-align: -.123em;
 }
 
 .nav-link {
@@ -38,18 +50,6 @@ a.nav-link.active {
 
 @keyframes blink {
   50% { opacity: 0; }
-}
-
-.replace {
-  display:none;
-}
-
-.hoverable:hover span.init {
-  display:none;
-}
-
-.hoverable:hover span.replace {
-  display:inline;
 }
 
 #profile-pic {
